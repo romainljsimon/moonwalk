@@ -60,6 +60,6 @@ for j, elt in enumerate(t_array):
     if j in time_logarray:
         observable_arrays = [pa.array(all_observables[:, i]) for i in range(all_observables.shape[1])]
         observable_table = pa.Table.from_arrays(observable_arrays, names=column_names) 
-        pq.write_table(observable_table, f'out{j}.parquet')
+        pq.write_table(observable_table, f'out/out{j}.parquet')
 
 
