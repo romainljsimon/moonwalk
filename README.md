@@ -53,7 +53,7 @@ The config.toml file specifies parameters for the simulation. Required fields in
 
 ### For walk:
 - **n_iter**: Number of iterations.
-- **theta*: Angle for rotation in each step.
+- **theta**: Angle for rotation in each step.
 
 ## Usage
 To run the simulation, ensure you have a properly configured config.toml file in the working directory. Then, execute:
@@ -76,6 +76,7 @@ n_walkers = 100
 walls = true
 type = "random"
 n_iter = 10000
+theta = 0.2
 ```
 
 ## License
