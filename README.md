@@ -6,7 +6,10 @@ DO NOT USE BROWNIAN YET. THIS WILL BE CHANGED SOON.
 ## Download the project
 
 Clone the git repo:
+
+ ```bash
 git clone https://github.com/romainljsimon/sphere_walk
+ ```
 
 Then install it with pip in the directory where you cloned the repo. Thus you will be able to launch the program in every directory of your computer.
  ```bash
@@ -74,7 +77,7 @@ Metadata, such as the current time, is stored in each Parquet file for easy post
 ```bash
 n_walkers = 100
 walls = true
-type = "random"
+type = 'walk'
 n_iter = 10000
 theta = 0.2
 ```
