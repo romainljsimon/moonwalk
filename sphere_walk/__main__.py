@@ -38,7 +38,7 @@ if simu_type == 'brownian':
     # If walls are enabled, require parameter 'a' from configuration
     if walls: 
         if 'a' not in config:
-            raise KeyError(f"Required configuration key '{key}' is missing from the TOML file. Necessary because walls is True")
+            raise KeyError(f"Required configuration key 'a' is missing from the TOML file. Necessary because walls is True")
         else:
             a = config['a']
     else:
@@ -50,6 +50,9 @@ elif simu_type == 'walk':
     n_iter = config['n_iter']
     theta = config['theta']
     dt = 1              # Fixed time step
+
+else:
+    raise ValueError(f"Configuration key 'simu_type' cannot accept value {simu_type}'. Good values are 'brownian' and 'walk'")
 
 # Configure observables from the 'observables' list in config, defaulting to 'normal'
 observables_str = config.get('observables', ['normal'])
