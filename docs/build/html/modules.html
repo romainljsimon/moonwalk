@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Modules &mdash; sphere_walk 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="sphere_walk documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sphere_walk
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions"><code class="docutils literal notranslate"><span class="pre">ZFunctions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.cos"><code class="docutils literal notranslate"><span class="pre">ZFunctions.cos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.heaviside"><code class="docutils literal notranslate"><span class="pre">ZFunctions.heaviside()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.normal"><code class="docutils literal notranslate"><span class="pre">ZFunctions.normal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.poly"><code class="docutils literal notranslate"><span class="pre">ZFunctions.poly()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.poly16"><code class="docutils literal notranslate"><span class="pre">ZFunctions.poly16()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.poly2"><code class="docutils literal notranslate"><span class="pre">ZFunctions.poly2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.poly4"><code class="docutils literal notranslate"><span class="pre">ZFunctions.poly4()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.poly8"><code class="docutils literal notranslate"><span class="pre">ZFunctions.poly8()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.z_dict_func"><code class="docutils literal notranslate"><span class="pre">ZFunctions.z_dict_func</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.z_functions.ZFunctions.z_dict_legend"><code class="docutils literal notranslate"><span class="pre">ZFunctions.z_dict_legend</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sphere_walk.brownian_motion.LineWalk"><code class="docutils literal notranslate"><span class="pre">LineWalk</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.brownian_motion.LineWalk.deriv_position"><code class="docutils literal notranslate"><span class="pre">LineWalk.deriv_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.brownian_motion.LineWalk.deriv_position_walls"><code class="docutils literal notranslate"><span class="pre">LineWalk.deriv_position_walls()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.brownian_motion.LineWalk.random_walk"><code class="docutils literal notranslate"><span class="pre">LineWalk.random_walk()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sphere_walk.brownian_motion.PointWalk"><code class="docutils literal notranslate"><span class="pre">PointWalk</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.brownian_motion.PointWalk.deriv_position"><code class="docutils literal notranslate"><span class="pre">PointWalk.deriv_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.brownian_motion.PointWalk.deriv_position_walls"><code class="docutils literal notranslate"><span class="pre">PointWalk.deriv_position_walls()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.brownian_motion.PointWalk.walk"><code class="docutils literal notranslate"><span class="pre">PointWalk.walk()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sphere_walk.random_walk.XYZWalk"><code class="docutils literal notranslate"><span class="pre">XYZWalk</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.random_walk.XYZWalk.calc_axis"><code class="docutils literal notranslate"><span class="pre">XYZWalk.calc_axis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere_walk.random_walk.XYZWalk.walk"><code class="docutils literal notranslate"><span class="pre">XYZWalk.walk()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sphere_walk</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Project Modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-modules">
+<h1>Project Modules<a class="headerlink" href="#project-modules" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py class" id="module-sphere_walk.z_functions">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphere_walk.z_functions.</span></span><span class="sig-name descname"><span class="pre">ZFunctions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ZFunctions is a class that defines different mathematical functions for use in physical simulations,
+such as random walk observables. It provides a selection of polynomial, trigonometric, and step functions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.cos">
+<span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.cos" title="Link to this definition"></a></dt>
+<dd><p>Cosine function that scales the first derivative by cos(point[1]).
+:type point: 
+:param point: Point in space.
+:type point: np.array
+:type deriv: 
+:param deriv: Derivative at the point.
+:type deriv: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cosine-scaled first derivative.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.heaviside">
+<span class="sig-name descname"><span class="pre">heaviside</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.heaviside" title="Link to this definition"></a></dt>
+<dd><p>Heaviside step function, which returns the normal function if point[1] is below a threshold
+(3*pi/4), and zero otherwise.
+:type point: 
+:param point: Point in space.
+:type point: np.array
+:type deriv: 
+:param deriv: Derivative at the point.
+:type deriv: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Output of the Heaviside step function.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.normal">
+<span class="sig-name descname"><span class="pre">normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.normal" title="Link to this definition"></a></dt>
+<dd><p>Basic function that returns the first derivative component.
+:type point: 
+:param point: Point in space, containing spatial coordinates.
+:type point: np.array
+:type deriv: 
+:param deriv: Derivative at the point.
+:type deriv: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>First component of the derivative.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.poly">
+<span class="sig-name descname"><span class="pre">poly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.poly" title="Link to this definition"></a></dt>
+<dd><p>General polynomial function that scales the derivative by (1 - (2/pi) * point[1]^exp).
+:type point: 
+:param point: Point in space.
+:type point: np.array
+:type deriv: 
+:param deriv: Derivative at the point.
+:type deriv: np.array
+:type exp: 
+:param exp: Exponent for the polynomial.
+:type exp: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Polynomial-scaled derivative.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.poly16">
+<span class="sig-name descname"><span class="pre">poly16</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.poly16" title="Link to this definition"></a></dt>
+<dd><p>Sixteenth-degree polynomial function that calls poly() with exp=16.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.poly2">
+<span class="sig-name descname"><span class="pre">poly2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.poly2" title="Link to this definition"></a></dt>
+<dd><p>Second-degree polynomial function that calls poly() with exp=2.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.poly4">
+<span class="sig-name descname"><span class="pre">poly4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.poly4" title="Link to this definition"></a></dt>
+<dd><p>Fourth-degree polynomial function that calls poly() with exp=4.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.poly8">
+<span class="sig-name descname"><span class="pre">poly8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.poly8" title="Link to this definition"></a></dt>
+<dd><p>Eighth-degree polynomial function that calls poly() with exp=8.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.z_dict_func">
+<span class="sig-name descname"><span class="pre">z_dict_func</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cos':</span> <span class="pre">'cos',</span> <span class="pre">'heaviside':</span> <span class="pre">'heaviside',</span> <span class="pre">'normal':</span> <span class="pre">'normal',</span> <span class="pre">'poly16':</span> <span class="pre">'poly16',</span> <span class="pre">'poly2':</span> <span class="pre">'poly2',</span> <span class="pre">'poly4':</span> <span class="pre">'poly4',</span> <span class="pre">'poly8':</span> <span class="pre">'poly8'}</span></em><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.z_dict_func" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphere_walk.z_functions.ZFunctions.z_dict_legend">
+<span class="sig-name descname"><span class="pre">z_dict_legend</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cos':</span> <span class="pre">'$cos$',</span> <span class="pre">'heaviside':</span> <span class="pre">'$heaviside$',</span> <span class="pre">'normal':</span> <span class="pre">'$\\langle</span> <span class="pre">\\lambda^2</span> <span class="pre">\\rangle$',</span> <span class="pre">'poly16':</span> <span class="pre">'$poly16$',</span> <span class="pre">'poly2':</span> <span class="pre">'$poly2$',</span> <span class="pre">'poly4':</span> <span class="pre">'$poly4$',</span> <span class="pre">'poly8':</span> <span class="pre">'$poly8$'}</span></em><a class="headerlink" href="#sphere_walk.z_functions.ZFunctions.z_dict_legend" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-sphere_walk.brownian_motion">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.LineWalk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphere_walk.brownian_motion.</span></span><span class="sig-name descname"><span class="pre">LineWalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observables_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.LineWalk" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing a random walker in 3D space along a line.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>dt<span class="classifier">float</span></dt><dd><p>Time increment for each step in the walk.</p>
+</dd>
+<dt>walls<span class="classifier">bool</span></dt><dd><p>If True, applies boundary conditions to constrain the walker.</p>
+</dd>
+<dt>a<span class="classifier">float</span></dt><dd><p>Scaling factor for boundary-conditioned calculations.</p>
+</dd>
+<dt>observables_class<span class="classifier">list</span></dt><dd><p>List of observable functions to apply during the walk.</p>
+</dd>
+<dt>observables<span class="classifier">numpy.ndarray</span></dt><dd><p>Array to store computed values of each observable.</p>
+</dd>
+<dt>position<span class="classifier">numpy.ndarray</span></dt><dd><p>3D position vector for the walker.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.LineWalk.deriv_position">
+<span class="sig-name descname"><span class="pre">deriv_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.LineWalk.deriv_position" title="Link to this definition"></a></dt>
+<dd><p>Computes the position displacement in 3D without boundary constraints.</p>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<p>:
+numpy.ndarray : 3D displacement vector [dlam, dphi, theta].</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.LineWalk.deriv_position_walls">
+<span class="sig-name descname"><span class="pre">deriv_position_walls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.LineWalk.deriv_position_walls" title="Link to this definition"></a></dt>
+<dd><p>Computes the position displacement in 3D with boundary constraints.</p>
+<section id="id1">
+<h3>Returns:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>:
+numpy.ndarray : 3D displacement vector [lambda, phi, theta] considering wall constraints.</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.LineWalk.random_walk">
+<span class="sig-name descname"><span class="pre">random_walk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.LineWalk.random_walk" title="Link to this definition"></a></dt>
+<dd><p>Executes a single step of the random walk.</p>
+<p>Computes displacement based on wall constraints and updates observables.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.PointWalk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphere_walk.brownian_motion.</span></span><span class="sig-name descname"><span class="pre">PointWalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observables_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.PointWalk" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing a point-like random walker on the 2-sphere. Its position is given
+by the longitude lambda and latitude phi.</p>
+<section id="id2">
+<h2>Attributes:<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>dt<span class="classifier">float</span></dt><dd><p>Time increment for each step in the walk.</p>
+</dd>
+<dt>walls<span class="classifier">bool</span></dt><dd><p>If True, applies boundary conditions (limits the walker).</p>
+</dd>
+<dt>a<span class="classifier">float</span></dt><dd><p>Factor used in boundary-conditioned position calculations.</p>
+</dd>
+<dt>observables_class<span class="classifier">list</span></dt><dd><p>List of observables (functions) to apply to the walker at each step.</p>
+</dd>
+<dt>observables<span class="classifier">numpy.ndarray</span></dt><dd><p>Array storing computed values of each observable.</p>
+</dd>
+<dt>position<span class="classifier">numpy.ndarray</span></dt><dd><p>2D position vector for the walker.</p>
+</dd>
+<dt>column_names<span class="classifier">list</span></dt><dd><p>Names for components of the position vector.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.PointWalk.deriv_position">
+<span class="sig-name descname"><span class="pre">deriv_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.PointWalk.deriv_position" title="Link to this definition"></a></dt>
+<dd><p>Computes the position displacement without boundary constraints.</p>
+<section id="id3">
+<h3>Returns:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>:
+numpy.ndarray : 2D displacement vector [lambda, phi].</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.PointWalk.deriv_position_walls">
+<span class="sig-name descname"><span class="pre">deriv_position_walls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.PointWalk.deriv_position_walls" title="Link to this definition"></a></dt>
+<dd><p>Computes the position displacement with boundary constraints.</p>
+<section id="id4">
+<h3>Returns:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>:
+numpy.ndarray : 2D displacement vector [lambda, phi] considering wall constraints.</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.brownian_motion.PointWalk.walk">
+<span class="sig-name descname"><span class="pre">walk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.brownian_motion.PointWalk.walk" title="Link to this definition"></a></dt>
+<dd><p>Executes a single step of the random walk.</p>
+<p>Computes the new position based on whether walls are enabled.
+Updates observables by applying each observable function to the position.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class" id="module-sphere_walk.random_walk">
+<dt class="sig sig-object py" id="sphere_walk.random_walk.XYZWalk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphere_walk.random_walk.</span></span><span class="sig-name descname"><span class="pre">XYZWalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.03</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">borns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([0.95,</span> <span class="pre">0.95,</span> <span class="pre">0.95])</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.random_walk.XYZWalk" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that simulates a 3D random walk with optional boundary constraints.</p>
+<p>The XYZWalk class models a walker that is a 3D coordinate system {x, y , z}, where each walk
+step rotates the current position matrix by a small angle theta around a random axis. The
+walker can be confined by specified bounds, simulating a system with or without walls.</p>
+<section id="id5">
+<h2>Attributes:<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>borns<span class="classifier">numpy.ndarray</span></dt><dd><p>A 1D array representing the boundary constraints for the walker’s x, y, and z positions.</p>
+</dd>
+<dt>v1<span class="classifier">numpy.ndarray</span></dt><dd><p>A 3x3 identity matrix that represents the initial position matrix of the walker in 3D space.</p>
+</dd>
+<dt>position<span class="classifier">numpy.ndarray</span></dt><dd><p>A flattened version of v1, representing the position of the walker in 1D form.</p>
+</dd>
+<dt>observables<span class="classifier">numpy.ndarray</span></dt><dd><p>An array to store observables related to the walk, initialized with a single zero.</p>
+</dd>
+<dt>walls<span class="classifier">bool</span></dt><dd><p>A flag to activate boundary constraints. If True, the walker cannot move beyond specified bounds.</p>
+</dd>
+<dt>theta<span class="classifier">float</span></dt><dd><p>The angle of rotation for each walk step, representing the magnitude of movement per step.</p>
+</dd>
+<dt>column_names<span class="classifier">list of str</span></dt><dd><p>Names of the position vector components, used for reference purposes.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>calc_axis() -&gt; numpy.ndarray</dt><dd><p>Generates a random unit vector that serves as the rotation axis for the walk step.</p>
+</dd>
+<dt>walk()</dt><dd><p>Executes a single step of the random walk by applying a rotation to v1. If walls are active,
+boundary constraints prevent the position from crossing predefined limits in borns.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.random_walk.XYZWalk.calc_axis">
+<span class="sig-name descname"><span class="pre">calc_axis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.random_walk.XYZWalk.calc_axis" title="Link to this definition"></a></dt>
+<dd><p>Generates a random unit vector to serve as the rotation axis for each step.</p>
+<p>The method samples from a 3D normal distribution and normalizes the result
+to ensure the vector has unit length. This axis is then used to compute
+the rotation matrix in the walk() method.</p>
+<section id="id6">
+<h3>Returns:<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<p>:
+numpy.ndarray</p>
+<blockquote>
+<div><p>A unit vector that serves as the axis of rotation.</p>
+</div></blockquote>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphere_walk.random_walk.XYZWalk.walk">
+<span class="sig-name descname"><span class="pre">walk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sphere_walk.random_walk.XYZWalk.walk" title="Link to this definition"></a></dt>
+<dd><p>Executes a single random walk step by rotating the walker’s position matrix.</p>
+<p>Each walk step applies a rotation by <cite>theta</cite> around a random axis generated by
+<cite>calc_axis()</cite>. The rotation matrix is constructed using the Rodrigues’ rotation
+formula. If <cite>walls</cite> is True, the walker cannot move beyond the boundary values
+specified in <cite>borns</cite>, and the step is discarded if it violates these constraints.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="sphere_walk documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Romain Simon.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
