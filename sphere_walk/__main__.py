@@ -1,12 +1,10 @@
 import toml
 import numpy as np
 import os
-import sphere_walk.brownian_motion as pw 
-import sphere_walk.z_functions as zf
+from sphere_walk import *
 import pyarrow as pa
 import pyarrow.parquet as pq
 import struct
-import sphere_walk.random_walk as rw
 
 # Load configuration from the TOML file
 config_file = 'config.toml'
@@ -56,7 +54,7 @@ elif simu_type == 'walk':
 # Configure observables from the 'observables' list in config, defaulting to 'normal'
 observables_str = config.get('observables', ['normal'])
 column_names = ["walker"] + observables_str  # Column names for results table
-observables_zf = [zf.ZFunctions(elt) for elt in observables_str]  # Create ZFunctions for each observable
+observables_zf = [ZFunctions(elt) for elt in observables_str]  # Create ZFunctions for each observable
 
 # Initialize arrays for storing time and walker data
 t_array = np.arange(n_iter)       # Array of time points
@@ -66,11 +64,11 @@ walker_array = []                 # Array to store walker objects
 for walk in np.arange(n_walkers):
     if simu_type == 'brownian':
         # Append PointWalk object for each walker if simulation is Brownian
-        walker_array.append(pw.PointWalk(dt=dt, walls=walls, a=a, observables_class=observables_zf))
+        walker_array.append(PointWalk(dt=dt, walls=walls, a=a, observables_class=observables_zf))
     
     elif simu_type == 'walk':
         # Append XYZWalk object for each walker if simulation is general walk
-        walker_array.append(rw.XYZWalk(theta=theta, walls=walls))
+        walker_array.append(XYZWalk(theta=theta, walls=walls))
 
 # Initialize arrays to store observables and walker positions
 all_observables = np.zeros((n_walkers, len(observables_str)))
