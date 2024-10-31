@@ -59,17 +59,20 @@ class ZFunctions:
     def cos(self, point, deriv):
         return np.cos(point[1]) * deriv[0]
 
+    def poly(self, point, deriv, exp):
+        return (1 - 2 / np.pi * point[1] ** exp) * deriv[0]
+    
     def poly2(self, point, deriv):
-        return (1 - 2 / np.pi * point[1]**2) * deriv[0]
+        return self.poly(point, deriv, 2)
 
     def poly4(self, point, deriv):
-        return (1 - 2 / np.pi * point[1]**4) * deriv[0]
+        return self.poly(point, deriv, 4)
 
     def poly8(self, point, deriv):
-        return (1 - 2 / np.pi * point[1]**8) * deriv[0]
+        return self.poly(point, deriv, 8)
 
     def poly16(self, point, deriv):
-        return (1 - 2 / np.pi * point[1]**16) * deriv[0]
+        return self.poly(point, deriv, 16)
 
     def heaviside(self, point, deriv):
         if point[1] < 3 * np.pi / 4:
