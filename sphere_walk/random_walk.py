@@ -16,8 +16,8 @@ class XYZWalk:
     """
     A class that simulates a 3D random walk with optional boundary constraints.
     
-    The XYZWalk class models a walker in a 3D space, where each walk step rotates 
-    the current position matrix by a small angle theta around a random axis. The 
+    The XYZWalk class models a walker that is a 3D coordinate system {x, y , z}, where each walk 
+    step rotates the current position matrix by a small angle theta around a random axis. The 
     walker can be confined by specified bounds, simulating a system with or without walls.
     
     Attributes:
