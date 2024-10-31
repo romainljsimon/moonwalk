@@ -78,7 +78,7 @@ Metadata, such as the current time, is stored in each Parquet file for easy post
 n_walkers = 100
 walls = true
 type = 'walk'
-n_iter = 10000
+n_iter = 100
 theta = 0.2
 ```
 
