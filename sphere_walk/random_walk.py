@@ -35,7 +35,7 @@ class XYZWalk:
     theta : float
         The angle of rotation for each walk step, representing the magnitude of movement per step.
     column_names : list of str
-        Names of the position vector components, used for reference and debugging purposes.
+        Names of the position vector components, used for reference purposes.
         
     Methods:
     -------
