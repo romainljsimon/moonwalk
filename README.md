@@ -1,6 +1,7 @@
 # Random Walk and Brownian Motion Simulation on the Sphere
 
 This project provides a simulation framework for modeling various types of random walks, including Brownian motion of a point on the sphere and the random walk of a coordinate system on the sphre. Additional configurable parameters such as walls and different observables are implemented. The simulation supports dynamic configurations via a TOML file, allowing users to easily control the simulation parameters and output settings.
+DO NOT USE BROWNIAN YET. THIS WILL BE CHANGED SOON.
 
 ## Download the project
 
