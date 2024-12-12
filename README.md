@@ -1,7 +1,6 @@
 # Random Walk and Brownian Motion Simulation on the Sphere
 
 This project provides a simulation framework for modeling various types of random walks, including Brownian motion of a point on the sphere and the random walk of a coordinate system on the sphre. Additional configurable parameters such as walls and different observables are implemented. The simulation supports dynamic configurations via a TOML file, allowing users to easily control the simulation parameters and output settings.
-DO NOT USE BROWNIAN YET. THIS WILL BE CHANGED SOON.
 
 ## Download the project
 
@@ -13,7 +12,7 @@ git clone https://github.com/romainljsimon/sphere_walk
 
 Then install it with pip in the directory where you cloned the repo. Thus you will be able to launch the program in every directory of your computer.
  ```bash
-pip install -e .
+pip install .
 ```
 
 ## Requirements
@@ -23,6 +22,7 @@ pip install -e .
 - **Numba**: For JIT compilation to optimize performance
 - **PyArrow**: For handling Parquet file storage
 - **TOML**: To load configuration from a `config.toml` file
+- **Julia**: To solve numerically SDEs
 
 Install dependencies with:
 
