@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sphere_walk"
+name = "moonwalk"
 version = "0.1.0"
 description = "A Brownian motion and random walk package on the 2-sphere"
 authors = [
@@ -22,4 +22,4 @@ readme = "README.md"
 requires-python = ">=3.7"
 
 [project.urls]
-repository = "https://github.com/romainljsimon/sphere_walk/"
+repository = "https://github.com/romainljsimon/moonwalk/"

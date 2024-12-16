@@ -1,7 +1,7 @@
 import toml
 import numpy as np
 import os
-from sphere_walk import *
+from moonwalk import *
 import pyarrow as pa
 import pyarrow.parquet as pq
 import struct
