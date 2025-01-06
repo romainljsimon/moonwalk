@@ -1,7 +1,8 @@
 moonwalk.egg-info/
 .DS_Store
 moonwalk/.DS_Store
-moonwalk/__pycache__/
+moonwalk/__pycache__/*
+moonwalk/analysis/__pycache__/*
 venv/
 tests/
 build/
