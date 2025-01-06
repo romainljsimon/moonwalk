@@ -24,11 +24,7 @@ pip install .
 - **TOML**: To load configuration from a `config.toml` file
 - **Julia**: To solve numerically SDEs
 
-Install dependencies with:
-
-```bash
-pip install numpy numba pyarrow toml
-```
+Dependencies should be installed when running pip install .
 
 ## Project Structure
 
@@ -62,7 +58,7 @@ The config.toml file specifies parameters for the simulation. Required fields in
 To run the simulation, ensure you have a properly configured config.toml file in the working directory. Then, execute:
 
 ```bash
-python -m sphere_walk
+python -m moonwalk
 ```
 
 The simulation performs a specified number of iterations for each walker, storing data snapshots as Parquet files in the out/ directory.
